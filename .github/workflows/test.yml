@@ -20,4 +20,4 @@ jobs:
     - name: Test action
       uses: zbazztian/actiontest@main
       with:
-        jira_url: irgendwatt
+        jira_url: '."; find'
