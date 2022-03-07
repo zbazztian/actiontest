@@ -1,0 +1,16 @@
+name: 'Test action'
+description: "Testing"
+inputs:
+  jira_url:
+    description: 'URL of the JIRA instance'
+    required: true
+runs:
+  using: composite
+  steps:
+  - name: Run a test
+    env:
+      JIRA_URL: '${{ inputs.jira_url }}'
+    shell: bash
+    run: |
+      echo "$JIRA_URL"
+      ls "$JIRA_URL"
